@@ -151,7 +151,7 @@ void print(int nPhilo, char* msg)
     gettimeofday(&curr, NULL);
 
     // время от начала эмуляции в миллисекундах
-    int fromBegin = time_diff(&curr, &table.emul_start);
+    int fromBegin = time_diff(&curr, &table.emul_start); //Время в выводе не совпадает c реальным временем на которое проверяется смерть 
     printf("%d %d %s\n", fromBegin, nPhilo, msg);
 
     pthread_mutex_unlock(&table.output_mutex);
